@@ -1,16 +1,18 @@
-const CACHE_NAME = "tasbih-counter-v1";
+const cacheName = "tasbih-counter-v1";
 const urlsToCache = [
   "/",
   "/index.html",
   "/style.css",
   "/script.js",
   "/icon-500x500.png",
-  "/icon-500x500.png"
+  "/icon-500x500.png",
+  "/desktop.png",
+  "/mobiless.jpg"
 ];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
+    caches.open(cacheName).then((cache) => {
       return cache.addAll(urlsToCache);
     })
   );
