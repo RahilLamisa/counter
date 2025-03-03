@@ -95,3 +95,31 @@ document.getElementById('ref7').addEventListener('click',function(){
     // console.log('okay');
     document.getElementById('count7').innerText='0';
 })
+
+
+document.getElementById('astaghfirullah').addEventListener('click',function(){
+    // console.log('okay');
+    let count8 = document.getElementById('count8').innerText;
+    let convertedCount8 = parseInt(count8);
+    // console.log(typeof convertedCount1);
+    let sum = convertedCount8 + 1;
+    document.getElementById('count8').innerText = sum;
+})
+document.getElementById('ref8').addEventListener('click',function(){
+    // console.log('okay');
+    document.getElementById('count8').innerText='0';
+})
+
+
+document.getElementById('laHaulaWala').addEventListener('click',function(){
+    // console.log('okay');
+    let count9 = document.getElementById('count9').innerText;
+    let convertedCount9 = parseInt(count9);
+    // console.log(typeof convertedCount1);
+    let sum = convertedCount9 + 1;
+    document.getElementById('count9').innerText = sum;
+})
+document.getElementById('ref9').addEventListener('click',function(){
+    // console.log('okay');
+    document.getElementById('count9').innerText='0';
+})
