@@ -1,4 +1,4 @@
-alert('Welcome 🤗')
+// alert('Welcome 🤗')
 document.getElementById('subhanallah').addEventListener('click',function(){
     // console.log('okay');
     let count1 = document.getElementById('count1').innerText;
