@@ -1,7 +1,8 @@
 {
     "name": "Tasbih Counter",
     "short_name": "Tasbih",
-    "start_url": "/",
+    "id":"/index.html",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#009688",
@@ -29,12 +30,6 @@
             "sizes": "720x1600",
             "type": "image/jpeg",
             "form_factor": "narrow"
-        }
-    ],
-    "protocol_handlers": [
-        {
-            "protocol": "web+tajbeeh",
-            "url": "%s/"
         }
     ]
 }
