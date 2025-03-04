@@ -1,85 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="counter.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-<link rel="manifest" href="manifest.json">
-<style>
-    
-.font {
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-</style>
-    </head>
-<body class="bg-blue-50 container mx-auto mt-5 font">
-    <div class="flex justify-center items-center gap-5">
-        <h1 class="text-3xl text-center font-bold">Counter</h1>
-    <button id="install-button" style="display: none;" class="bg-blue-200 p-2 rounded-md">Install App</button>
-    </div>
-    <br>
+    <link rel="shortcut icon" href="counter.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-50 container mx-auto mt-5 p-6 font">
+    <h1 class="text-3xl text-center font-bold">Counter</h1>
+    <br />
     <div class="border border-blue-400 border-dashed"></div>
     <div class="mt-8 mx-5">
-        <p class="text-center text-2xl">Click on the dua</p>
-        <div class="flex justify-between items-center mb-3 mt-5">
-            <button id="others" class=" text-xl bg-green-200 h-[50px] w-[220px] rounded-2xl font-semibold">Count</button>
-            <p id="count7" class="text-3xl">0</p>
-            <button id="ref7" class="bg-green-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        <div class="flex justify-between items-center mb-3">
-            <button id="subhanallah" class=" text-xl bg-blue-200 h-[100px] w-[220px] rounded-2xl font-semibold">سُـبْحانَ الله <br> Subhanallah</button>
-            <p id="count1" class="text-3xl">0</p>
-            <button id="ref1" class="bg-blue-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        <div class="flex justify-between items-center mb-3">
-            <button id="alhamdulillah" class=" text-xl bg-green-200 h-[100px] w-[220px]  rounded-2xl font-semibold">ٱلْحَمْدُ لِلَّٰهِ <br> Alhamdulillah</button>
-            <p id="count2" class="text-3xl">0</p>
-            <button id="ref2" class="bg-green-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        <div class="flex justify-between items-center mb-3">
-            <button id="allahuakbar" class=" text-xl bg-blue-200 h-[100px] w-[220px] rounded-2xl font-semibold"> اللّٰهُ أَكْبَر <br> Allahuakbar</button>
-            <p id="count3" class="text-3xl">0</p>
-            <button id="ref3" class="bg-blue-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        <div class="flex justify-between items-center mb-3">
-            <button id="lailahaillallah" class=" text-xl bg-green-200 h-[100px] w-[220px] rounded-2xl font-semibold"> لَا إِلَٰهَ إِلَّا ٱللَّٰهُ <br> La ilaha illallah</button>
-            <p id="count4" class="text-3xl">0</p>
-            <button id="ref4" class="bg-green-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        <div class="flex justify-between items-center mb-3">
-            <button id="sallallah" class=" text-xl bg-blue-200 h-[100px] w-[220px] rounded-2xl font-semibold"> صَلَّى ٱللَّٰهُ عَلَيْهِ وَسَلَّمَ <br> (Sm.) </button>
-            <p id="count5" class="text-3xl">0</p>
-            <button id="ref5" class="bg-blue-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        <div class="flex justify-between items-center mb-3">
-            <button id="astaghfirullah" class=" text-xl bg-green-200 h-[100px] w-[220px] rounded-2xl font-semibold"> أَسْتَغْفِرُ ٱللَّٰهَ <br> Astaghfirullah</button>
-            <p id="count8" class="text-3xl">0</p>
-            <button id="ref8" class="bg-green-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div> 
-        <div class="text-center mb-3">
-            <button id="ajim" class=" text-xl bg-blue-200 p-3 rounded-2xl font-semibold"> سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ العَظِيم <br> Subhanallahi wabihamdihi subhanallahil azeem</button>
-            <p id="count6" class="text-3xl">0</p>
-            <button id="ref6" class="bg-blue-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        <div class="text-center mb-3">
-            <button id="laHaulaWala" class=" text-xl bg-green-200 p-3 rounded-2xl font-semibold"> لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّٰهِ ٱلْعَلِيِّ ٱلْعَظِيمِ <br> La haula wala quwwata illa billahil aliyyil adzim</button>
-            <p id="count9" class="text-3xl">0</p>
-            <button id="ref9" class="bg-green-200 p-3 rounded-xl"><img src="refresh.png" alt="refresh" class="h-6"></button>
-        </div>
-        
-        
+      <p class="text-center text-2xl">Click on the dua</p>
+      <div class="flex justify-between items-center mb-3 mt-5">
+        <button
+          id="others"
+          class="text-xl bg-green-200 h-[50px] w-[220px] rounded-2xl font-semibold"
+        >
+          Count
+        </button>
+        <p id="count7" class="text-3xl">0</p>
+        <button id="ref7" class="bg-green-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="flex justify-between items-center mb-3">
+        <button
+          id="subhanallah"
+          class="text-xl bg-blue-200 h-[100px] w-[220px] rounded-2xl font-semibold"
+        >
+          سُـبْحانَ الله <br />
+          Subhanallah
+        </button>
+        <p id="count1" class="text-3xl">0</p>
+        <button id="ref1" class="bg-blue-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="flex justify-between items-center mb-3">
+        <button
+          id="alhamdulillah"
+          class="text-xl bg-green-200 h-[100px] w-[220px] rounded-2xl font-semibold"
+        >
+          ٱلْحَمْدُ لِلَّٰهِ <br />
+          Alhamdulillah
+        </button>
+        <p id="count2" class="text-3xl">0</p>
+        <button id="ref2" class="bg-green-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="flex justify-between items-center mb-3">
+        <button
+          id="allahuakbar"
+          class="text-xl bg-blue-200 h-[100px] w-[220px] rounded-2xl font-semibold"
+        >
+          اللّٰهُ أَكْبَر <br />
+          Allahuakbar
+        </button>
+        <p id="count3" class="text-3xl">0</p>
+        <button id="ref3" class="bg-blue-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="flex justify-between items-center mb-3">
+        <button
+          id="lailahaillallah"
+          class="text-xl bg-green-200 h-[100px] w-[220px] rounded-2xl font-semibold"
+        >
+          لَا إِلَٰهَ إِلَّا ٱللَّٰهُ <br />
+          La ilaha illallah
+        </button>
+        <p id="count4" class="text-3xl">0</p>
+        <button id="ref4" class="bg-green-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="flex justify-between items-center mb-3">
+        <button
+          id="sallallah"
+          class="text-xl bg-blue-200 h-[100px] w-[220px] rounded-2xl font-semibold"
+        >
+          صَلَّى ٱللَّٰهُ عَلَيْهِ وَسَلَّمَ <br />
+          (Sm.)
+        </button>
+        <p id="count5" class="text-3xl">0</p>
+        <button id="ref5" class="bg-blue-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="flex justify-between items-center mb-3">
+        <button
+          id="astaghfirullah"
+          class="text-xl bg-green-200 h-[100px] w-[220px] rounded-2xl font-semibold"
+        >
+          أَسْتَغْفِرُ ٱللَّٰهَ <br />
+          Astaghfirullah
+        </button>
+        <p id="count8" class="text-3xl">0</p>
+        <button id="ref8" class="bg-green-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="text-center mb-3">
+        <button
+          id="ajim"
+          class="text-xl bg-blue-200 p-3 rounded-2xl font-semibold"
+        >
+          سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ العَظِيم <br />
+          Subhanallahi wabihamdihi subhanallahil azeem
+        </button>
+        <p id="count6" class="text-3xl">0</p>
+        <button id="ref6" class="bg-blue-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
+      <div class="text-center mb-3">
+        <button
+          id="laHaulaWala"
+          class="text-xl bg-green-200 p-3 rounded-2xl font-semibold"
+        >
+          لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّٰهِ ٱلْعَلِيِّ ٱلْعَظِيمِ
+          <br />
+          La haula wala quwwata illa billahil aliyyil adzim
+        </button>
+        <p id="count9" class="text-3xl">0</p>
+        <button id="ref9" class="bg-green-200 p-3 rounded-xl">
+          <img src="refresh.png" alt="refresh" class="h-6" />
+        </button>
+      </div>
     </div>
-
-
     <script src="counter.js"></script>
-    <script src="service-worker.js"></script>
-    <script src="app.js"></script>
-</body>
+  </body>
 </html>
